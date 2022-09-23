@@ -1,0 +1,32 @@
+1.
+
+	1.1.
+	a. Instalar VirtualBox
+	b. Instalar Cubectl
+	c. Instalar Minikube
+
+
+	/Instalar Chocolatey/
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+	/Instalar kubectl/
+	choco install kubernetes-cli
+
+	/Verificar la instalacion de kubectl/
+	kubectl version
+
+	/Abrir minikube/
+	minikube start
+
+	/Verificar cluster de kubernetes local creado/
+	kubectl cluster-info
+
+	/Verificar el nodo/
+	kubectl get nodes -owide
+
+
+	1.2.
+	/Instalar kind/
+	choco install kind
+	/Instalarar docker/
+	choco install docker-desktop
